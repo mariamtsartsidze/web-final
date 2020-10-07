@@ -1,12 +1,12 @@
 # web-final
 Final project for web development, Instagram clone/prototype
 
-technologies:
+**technologies:**
 
 frontend: lit element;
 backend: nodeJS
 
-structure:
+**structure:**
 - router
 - login/register page
 - news feed
