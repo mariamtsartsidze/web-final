@@ -1,47 +1,63 @@
-/**
- * @license
- * Copyright (c) 2019 The Polymer Project Authors. All rights reserved.
- * This code may only be used under the BSD style license found at
- * http://polymer.github.io/LICENSE.txt
- * The complete set of authors may be found at
- * http://polymer.github.io/AUTHORS.txt
- * The complete set of contributors may be found at
- * http://polymer.github.io/CONTRIBUTORS.txt
- * Code distributed by Google as part of the polymer project is also
- * subject to an additional IP rights grant found at
- * http://polymer.github.io/PATENTS.txt
- */
-
 import { LitElement, html, css } from 'lit-element';
 
-/**
- * An example element.
- *
- * @slot - This element has a slot
- * @csspart button - The button
- */
 export class MyElement extends LitElement {
   static get styles() {
     return css`
-      :host {
-        display: block;
-        border: solid 1px gray;
-        padding: 16px;
-        max-width: 800px;
+      .header {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        height: var(--header-height);
+        background-color: var(--header-white);
+        border-bottom: 1px solid rgba(var(--b6a, 219, 219, 219), 1);
+      }
+
+      .nav-bar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 55%;
+        background-color: cyan;
+      }
+
+      .home-button {
+        display: flex;
+        cursor: pointer;
+      }
+
+      .logo {
+        width: var(--logo-width);
+      }
+
+      .search-field {
+        width: var(--search-field-width);
+        height: var(--search-field-height);
+        background-color: var(--tester-purple);
+      }
+
+      .shortcuts {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: var(--tester-purple);
+      }
+
+      .shortcut:not(:first-child) {
+        margin-left: var(--shortcut-left-margin);
+      }
+
+      .content {
+        display: flex;
+        height: calc(100vh - var(--header-height) - 1px);
+        background-color: var(--background-white);
       }
     `;
   }
 
   static get properties() {
     return {
-      /**
-       * The name to say "Hello" to.
-       */
       name: { type: String },
-
-      /**
-       * The number of times the button has been clicked.
-       */
       count: { type: Number },
     };
   }
@@ -52,8 +68,28 @@ export class MyElement extends LitElement {
     this.count = 0;
   }
 
+  _redirectiToHome() {
+    console.log('redirecting');
+  }
+
   render() {
-    return html` <h1>Web Final Project Starter</h1> `;
+    return html`
+      <div class="header">
+        <div class="nav-bar">
+          <div class="home-button" @click=${this._redirectiToHome}>
+            <img class="logo" src="../assets/images/logo.png" />
+          </div>
+          <div class="search-field">search</div>
+          <div class="shortcuts">
+            <div class="shortcut">1</div>
+            <div class="shortcut">2</div>
+            <div class="shortcut">3</div>
+            <div class="shortcut">4</div>
+          </div>
+        </div>
+      </div>
+      <div class="content"></div>
+    `;
   }
 }
 

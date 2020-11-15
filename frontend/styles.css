@@ -1,0 +1,21 @@
+:root {
+  /* site colors */
+  --header-white: #ffffff;
+  --background-white: #fcfcfc;
+
+  /* layout sizes */
+  --header-height: 54px;
+
+  /* logo */
+  --logo-height: 29px;
+  --logo-width: 103px;
+
+  /* search field */
+  --search-field-width: 215px;
+  --search-field-height: 28px;
+
+  /* shortcuts */
+  --shortcut-left-margin: 22px;
+
+  --tester-purple: purple;
+}
