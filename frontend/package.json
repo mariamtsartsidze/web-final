@@ -1,0 +1,30 @@
+{
+  "name": "frontend",
+  "version": "0.0.0",
+  "description": "A simple web component",
+  "main": "./src/root-element.js",
+  "type": "module",
+  "scripts": {
+    "start:dev": "NODE_ENV=development es-dev-server --node-resolve --watch",
+    "serve": "es-dev-server --node-resolve --watch",
+    "build": "echo \"This is not a TypeScript project, so no need to build.\""
+  },
+  "keywords": [
+    "web-components",
+    "lit-element",
+    "javascript"
+  ],
+  "author": "The Polymer Authors",
+  "license": "BSD-3-Clause",
+  "dependencies": {
+    "lit-element": "^2.3.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "es-dev-server": "^1.46.1",
+    "eslint": "^6.8.0",
+    "lit-analyzer": "^1.1.9",
+    "prettier": "^2.0.4",
+    "web-component-analyzer": "^1.0.3"
+  }
+}
