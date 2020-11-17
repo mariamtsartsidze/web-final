@@ -1,4 +1,5 @@
 import { LitElement, html, css } from 'lit-element';
+import './post-element';
 
 export class MyElement extends LitElement {
   static get styles() {
@@ -10,6 +11,12 @@ export class MyElement extends LitElement {
         height: var(--header-height);
         background-color: var(--header-white);
         border-bottom: 1px solid rgba(var(--b6a, 219, 219, 219), 1);
+      }
+
+      .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
       }
 
       .nav-bar {
@@ -48,8 +55,9 @@ export class MyElement extends LitElement {
       }
 
       .content {
+        padding-top: calc(var(--header-height) + 1px);
         display: flex;
-        height: calc(100vh - var(--header-height) - 1px);
+        /*height: calc(100vh - var(--header-height) - 1px);*/
         background-color: var(--background-white);
       }
     `;
@@ -74,7 +82,7 @@ export class MyElement extends LitElement {
 
   render() {
     return html`
-      <div class="header">
+      <div class="header sticky">
         <div class="nav-bar">
           <div class="home-button" @click=${this._redirectiToHome}>
             <img class="logo" src="../assets/images/logo.png" />
@@ -88,7 +96,9 @@ export class MyElement extends LitElement {
           </div>
         </div>
       </div>
-      <div class="content"></div>
+      <div class="content">
+        <post-element .imgUrl=${'../assets/images/IMG_20201017_150630.jpg'}></post-element>
+      </div>
     `;
   }
 }
