@@ -20,8 +20,8 @@ export class PostElement extends LitElement {
         }
 
         .header {
-          height: var(--header-height);
-          padding: var(--header-padding);
+          height: 60px;
+          padding: 16px;
           border-bottom: 1px solid rgba(var(--ce3, 239, 239, 239), 1);
         }
 
@@ -32,6 +32,15 @@ export class PostElement extends LitElement {
         .add-comment {
           height: var(--add-comment-height);
           border-top: 1px solid rgba(var(--ce3, 239, 239, 239), 1);
+        }
+
+        .reactions {
+          display: flex;
+          flex-direction: row;
+        }
+
+        .reaction:not(:first-child) {
+          margin-left: 16px;
         }
       `,
     ];
@@ -62,8 +71,9 @@ export class PostElement extends LitElement {
           <img src="${this.imgUrl}" />
         </div>
         <div class="reactions">
-          <div>blabla</div>
-          <div>blabla</div>
+          <iron-icon icon="thumb-up" class="reaction"></iron-icon>
+          <iron-icon icon="communication:comment" class="reaction"></iron-icon>
+          <iron-icon icon="communication:message" class="reaction"></iron-icon>
         </div>
         <div class="add-comment"></div>
       </div>

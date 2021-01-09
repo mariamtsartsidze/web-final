@@ -2,6 +2,8 @@
   /* site colors */
   --header-white: #ffffff;
   --background-white: #fcfcfc;
+  --text-color: rgb(38, 38, 38);
+  --color-gray-1: rgb(148, 148, 148);
 
   /* layout sizes */
   --header-height: 54px;

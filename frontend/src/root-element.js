@@ -25,7 +25,6 @@ export class MyElement extends LitElement {
         justify-content: space-between;
         align-items: center;
         width: 55%;
-        background-color: cyan;
       }
 
       .home-button {
@@ -40,14 +39,12 @@ export class MyElement extends LitElement {
       .search-field {
         width: var(--search-field-width);
         height: var(--search-field-height);
-        background-color: var(--tester-purple);
       }
 
       .shortcuts {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        background-color: var(--tester-purple);
       }
 
       .shortcut:not(:first-child) {
@@ -57,8 +54,21 @@ export class MyElement extends LitElement {
       .content {
         padding-top: calc(var(--header-height) + 1px);
         display: flex;
-        /*height: calc(100vh - var(--header-height) - 1px);*/
         background-color: var(--background-white);
+      }
+
+      .search-input {
+        width: var(--search-field-width);
+        height: var(--search-field-height);
+        outline: none;
+        box-sizing: border-box;
+        border: none;
+        border: solid 1px var(--color-gray-1);
+        border-radius: 4px;
+      }
+
+      .search-input:not(:focus)::placeholder {
+        text-align: center;
       }
     `;
   }
@@ -87,12 +97,14 @@ export class MyElement extends LitElement {
           <div class="home-button" @click=${this._redirectiToHome}>
             <img class="logo" src="../assets/images/logo.png" />
           </div>
-          <div class="search-field">search</div>
+          <div class="search-field">
+            <input type="text" placeholder="search" class="search-input" />
+          </div>
           <div class="shortcuts">
-            <div class="shortcut">1</div>
-            <div class="shortcut">2</div>
-            <div class="shortcut">3</div>
-            <div class="shortcut">4</div>
+            <iron-icon icon="home" class="shortcut"></iron-icon>
+            <iron-icon icon="communication:message" class="shortcut"></iron-icon>
+            <iron-icon icon="thumb-up" class="shortcut"></iron-icon>
+            <div class="shortcut">pic</div>
           </div>
         </div>
       </div>
