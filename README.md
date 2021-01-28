@@ -7,7 +7,7 @@ frontend: lit element;
 backend: nodeJS
 
 **structure:**
-- router
+- routing
 - login/register page
 - news feed
 - timeline
