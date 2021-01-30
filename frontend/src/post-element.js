@@ -1,5 +1,5 @@
 import { LitElement, html, css } from 'lit-element';
-import { commonStyles } from '../src/styles/common-styles';
+import { commonStyles } from './styles/common-styles';
 
 export class PostElement extends LitElement {
   static get styles() {

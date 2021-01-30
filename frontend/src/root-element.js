@@ -1,5 +1,7 @@
 import { LitElement, html, css } from 'lit-element';
 import './post-element';
+// import { Post } from './services/post';
+// import { User } from './services/user';
 
 export class MyElement extends LitElement {
   static get styles() {
@@ -84,6 +86,16 @@ export class MyElement extends LitElement {
     super();
     this.name = 'World';
     this.count = 0;
+    // let posts = new Post();
+    // let user = new User();
+    // console.log(posts.posts());
+    // console.log(posts.userWall(1));
+    // console.log(posts.userFeed());
+    // console.log(user.login('bestUser1', 'password1'));
+    // // console.log(user.login('bestUser1', 'password2'));
+    // console.log(localStorage.getItem('userInfo'));
+    // user.logout();
+    // console.log(localStorage.getItem('userInfo'));
   }
 
   _redirectiToHome() {
