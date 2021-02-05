@@ -1,9 +1,8 @@
-import { LitElement, html, css } from 'lit-element';
+import { html, css } from 'lit-element';
 import './post-element';
-import { PostApi } from './api/post-api';
-// import { UserApi } from './api/user-api';
+import { BaseElement } from './base-element';
 
-export class MyElement extends LitElement {
+export class MyElement extends BaseElement {
   static get styles() {
     return css`
       .header {
@@ -77,26 +76,22 @@ export class MyElement extends LitElement {
 
   static get properties() {
     return {
-      name: { type: String },
-      count: { type: Number },
+      newsFeed: { type: Array },
+      timeline: { type: Array },
     };
   }
 
   constructor() {
     super();
-    this.name = 'World';
-    this.count = 0;
-    let posts = new PostApi();
-    // let user = new UserApi();
-    posts.posts();
-    // console.log(posts.posts());
-    // console.log(posts.userWall(1));
-    // console.log(posts.userFeed());
-    // console.log(user.login('bestUser1', 'password1'));
-    // // console.log(user.login('bestUser1', 'password2'));
-    // console.log(localStorage.getItem('userInfo'));
-    // user.logout();
-    // console.log(localStorage.getItem('userInfo'));
+    this.newsFeed = [];
+    this.timeline = [];
+  }
+
+  async firstUpdated() {
+    this.newsFeed = await this.postApi.newsFeed();
+    this.timeline = await this.postApi.timeline(1);
+    console.log('newsFeed: ', this.newsFeed);
+    console.log('timeline: ', this.timeline);
   }
 
   _redirectiToHome() {

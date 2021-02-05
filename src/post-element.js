@@ -1,7 +1,8 @@
-import { LitElement, html, css } from 'lit-element';
+import { html, css } from 'lit-element';
 import { commonStyles } from './styles/common-styles';
+import { BaseElement } from './base-element';
 
-export class PostElement extends LitElement {
+export class PostElement extends BaseElement {
   static get styles() {
     return [
       commonStyles,

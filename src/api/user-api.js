@@ -1,6 +1,6 @@
-import { Base } from './base';
+import { BaseApi } from './base-api';
 
-export class UserApi extends Base {
+export class UserApi extends BaseApi {
   constructor() {
     super();
   }
