@@ -42,6 +42,12 @@ export class PostElement extends LitElement {
         .reaction:not(:first-child) {
           margin-left: 16px;
         }
+
+        @media (max-width: 600px) {
+          :host {
+            --card-width: 100%;
+          }
+        }
       `,
     ];
   }

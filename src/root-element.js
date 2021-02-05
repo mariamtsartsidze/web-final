@@ -1,7 +1,7 @@
 import { LitElement, html, css } from 'lit-element';
 import './post-element';
-// import { Post } from './services/post';
-// import { User } from './services/user';
+import { PostApi } from './api/post-api';
+// import { UserApi } from './api/user-api';
 
 export class MyElement extends LitElement {
   static get styles() {
@@ -86,8 +86,9 @@ export class MyElement extends LitElement {
     super();
     this.name = 'World';
     this.count = 0;
-    // let posts = new Post();
-    // let user = new User();
+    let posts = new PostApi();
+    // let user = new UserApi();
+    posts.posts();
     // console.log(posts.posts());
     // console.log(posts.userWall(1));
     // console.log(posts.userFeed());
