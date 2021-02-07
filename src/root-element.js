@@ -1,8 +1,9 @@
 import { html, css } from 'lit-element';
-import './post-element';
+import './modules/news-feed/post-element';
+import './modules/news-feed/news-feed';
 import { BaseElement } from './base-element';
 
-export class MyElement extends BaseElement {
+export class RootElement extends BaseElement {
   static get styles() {
     return css`
       .header {
@@ -83,15 +84,6 @@ export class MyElement extends BaseElement {
 
   constructor() {
     super();
-    this.newsFeed = [];
-    this.timeline = [];
-  }
-
-  async firstUpdated() {
-    this.newsFeed = await this.postApi.newsFeed();
-    this.timeline = await this.postApi.timeline(1);
-    console.log('newsFeed: ', this.newsFeed);
-    console.log('timeline: ', this.timeline);
   }
 
   _redirectiToHome() {
@@ -117,10 +109,10 @@ export class MyElement extends BaseElement {
         </div>
       </div>
       <div class="content">
-        <post-element .imgUrl=${'../assets/images/IMG_20201017_150630.jpg'}></post-element>
+        <news-feed></news-feed>
       </div>
     `;
   }
 }
 
-window.customElements.define('root-element', MyElement);
+window.customElements.define('root-element', RootElement);

@@ -1,6 +1,6 @@
 import { html, css } from 'lit-element';
-import { commonStyles } from './styles/common-styles';
-import { BaseElement } from './base-element';
+import { commonStyles } from '../../styles/common-styles';
+import { BaseElement } from '../../base-element';
 
 export class PostElement extends BaseElement {
   static get styles() {
@@ -67,7 +67,7 @@ export class PostElement extends BaseElement {
   }
 
   updated() {
-    console.log(this.imgUrl);
+    // console.log(this.imgUrl);
   }
 
   render() {
