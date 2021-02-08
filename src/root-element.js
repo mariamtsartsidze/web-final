@@ -1,7 +1,8 @@
 import { html, css } from 'lit-element';
-import './modules/news-feed/post-element';
-import './modules/news-feed/news-feed';
 import { BaseElement } from './base-element';
+import { Router } from '@vaadin/router';
+import { routes } from './routes';
+import './modules/news-feed/news-feed';
 
 export class RootElement extends BaseElement {
   static get styles() {
@@ -86,6 +87,14 @@ export class RootElement extends BaseElement {
     super();
   }
 
+  firstUpdated() {
+    const outlet = this.shadowRoot.getElementById('outlet');
+    console.log('outlet: ', outlet);
+    const router = new Router(outlet);
+
+    router.setRoutes(routes);
+  }
+
   _redirectiToHome() {
     console.log('redirecting');
   }
@@ -109,7 +118,7 @@ export class RootElement extends BaseElement {
         </div>
       </div>
       <div class="content">
-        <news-feed></news-feed>
+        <div id="outlet"></div>
       </div>
     `;
   }
