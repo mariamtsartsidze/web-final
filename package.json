@@ -5,8 +5,8 @@
   "main": "./src/root-element.js",
   "type": "module",
   "scripts": {
-    "start": "NODE_ENV=development es-dev-server --node-resolve --watch",
-    "serve": "es-dev-server --node-resolve --watch",
+    "start": "NODE_ENV=development es-dev-server --node-resolve --app-index index.html --watch",
+    "serve": "es-dev-server --node-resolve --app-index index.html --watch",
     "build": "echo \"This is not a TypeScript project, so no need to build.\""
   },
   "keywords": [
