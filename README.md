@@ -4,7 +4,7 @@ Final project for web development, Instagram clone/prototype
 **technologies:**
 
 frontend: lit element;
-backend: nodeJS
+backend: fake API using json files
 
 **structure:**
 - routing
