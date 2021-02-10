@@ -8,10 +8,11 @@ export class PostElement extends BaseElement {
       commonStyles,
       css`
         :host {
-          --card-width: 616px;
+          --card-width: var(--post-width);
           --header-height: 60px;
           --header-padding: 16px;
           --add-comment-height: 56px;
+          display: block;
         }
 
         .card {

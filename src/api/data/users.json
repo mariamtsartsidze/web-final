@@ -1,5 +1,26 @@
 [
-  { "id": 1, "username": "bestUser1", "password": "password1", "firstName": "Amanda", "lastName": "Palmer" },
-  { "id": 2, "username": "bestUser2", "password": "password2", "firstName": "John", "lastName": "Locke" },
-  { "id": 3, "username": "bestUser3", "password": "password3", "firstName": "Jack", "lastName": "Shepherd" }
+  {
+    "id": 1,
+    "username": "user_01",
+    "password": "password1",
+    "firstName": "Amanda",
+    "lastName": "Palmer",
+    "photoUrl": "../../assets/images/IMG_20210109_153553.jpg"
+  },
+  {
+    "id": 2,
+    "username": "user_02",
+    "password": "password2",
+    "firstName": "John",
+    "lastName": "Locke",
+    "photoUrl": "../../assets/images/IMG_20210109_153553.jpg"
+  },
+  {
+    "id": 3,
+    "username": "user_03",
+    "password": "password3",
+    "firstName": "Jack",
+    "lastName": "Shepherd",
+    "photoUrl": "../../assets/images/IMG_20210109_153553.jpg"
+  }
 ]

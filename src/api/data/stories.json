@@ -1,0 +1,242 @@
+[
+  {
+    "userId": 1,
+    "userName": "user_01",
+    "userPhotoUrl": "../../assets/images/IMG_20210109_153553.jpg",
+    "seen": false,
+    "stories": [
+      {
+        "id": 1,
+        "url": "../../assets/images/IMG_20201017_150630.jpg"
+      },
+      {
+        "id": 2,
+        "url": "../../assets/images/IMG_20201017_150630.jpg"
+      },
+      {
+        "id": 3,
+        "url": "../../assets/images/IMG_20201017_150630.jpg"
+      }
+    ]
+  },
+  {
+    "userId": 2,
+    "userName": "user_02",
+    "userPhotoUrl": "../../assets/images/IMG_20210109_153553.jpg",
+    "seen": false,
+    "stories": [
+      {
+        "id": 4,
+        "url": "../../assets/images/IMG_20201017_150630.jpg"
+      },
+      {
+        "id": 5,
+        "url": "../../assets/images/IMG_20201017_150630.jpg"
+      },
+      {
+        "id": 6,
+        "url": "../../assets/images/IMG_20201017_150630.jpg"
+      }
+    ]
+  },
+  {
+    "userId": 3,
+    "userName": "user_03",
+    "userPhotoUrl": "../../assets/images/IMG_20210109_153553.jpg",
+    "seen": false,
+    "stories": [
+      {
+        "id": 7,
+        "url": "../../assets/images/IMG_20201017_150630.jpg"
+      },
+      {
+        "id": 8,
+        "url": "../../assets/images/IMG_20201017_150630.jpg"
+      },
+      {
+        "id": 9,
+        "url": "../../assets/images/IMG_20201017_150630.jpg"
+      }
+    ]
+  },
+  {
+    "userId": 4,
+    "userName": "user_04",
+    "userPhotoUrl": "../../assets/images/IMG_20210109_153553.jpg",
+    "seen": false,
+    "stories": [
+      {
+        "id": 1,
+        "url": "../../assets/images/IMG_20201017_150630.jpg"
+      },
+      {
+        "id": 2,
+        "url": "../../assets/images/IMG_20201017_150630.jpg"
+      },
+      {
+        "id": 3,
+        "url": "../../assets/images/IMG_20201017_150630.jpg"
+      }
+    ]
+  },
+  {
+    "userId": 5,
+    "userName": "user_05",
+    "userPhotoUrl": "../../assets/images/IMG_20210109_153553.jpg",
+    "seen": false,
+    "stories": [
+      {
+        "id": 4,
+        "url": "../../assets/images/IMG_20201017_150630.jpg"
+      },
+      {
+        "id": 5,
+        "url": "../../assets/images/IMG_20201017_150630.jpg"
+      },
+      {
+        "id": 6,
+        "url": "../../assets/images/IMG_20201017_150630.jpg"
+      }
+    ]
+  },
+  {
+    "userId": 6,
+    "userName": "user_06",
+    "userPhotoUrl": "../../assets/images/IMG_20210109_153553.jpg",
+    "seen": false,
+    "stories": [
+      {
+        "id": 7,
+        "url": "../../assets/images/IMG_20201017_150630.jpg"
+      },
+      {
+        "id": 8,
+        "url": "../../assets/images/IMG_20201017_150630.jpg"
+      },
+      {
+        "id": 9,
+        "url": "../../assets/images/IMG_20201017_150630.jpg"
+      }
+    ]
+  },
+  {
+    "userId": 7,
+    "userName": "user_07",
+    "userPhotoUrl": "../../assets/images/IMG_20210109_153553.jpg",
+    "seen": false,
+    "stories": [
+      {
+        "id": 1,
+        "url": "../../assets/images/IMG_20201017_150630.jpg"
+      },
+      {
+        "id": 2,
+        "url": "../../assets/images/IMG_20201017_150630.jpg"
+      },
+      {
+        "id": 3,
+        "url": "../../assets/images/IMG_20201017_150630.jpg"
+      }
+    ]
+  },
+  {
+    "userId": 8,
+    "userName": "user_08",
+    "userPhotoUrl": "../../assets/images/IMG_20210109_153553.jpg",
+    "seen": false,
+    "stories": [
+      {
+        "id": 4,
+        "url": "../../assets/images/IMG_20201017_150630.jpg"
+      },
+      {
+        "id": 5,
+        "url": "../../assets/images/IMG_20201017_150630.jpg"
+      },
+      {
+        "id": 6,
+        "url": "../../assets/images/IMG_20201017_150630.jpg"
+      }
+    ]
+  },
+  {
+    "userId": 9,
+    "userName": "user_09",
+    "userPhotoUrl": "../../assets/images/IMG_20210109_153553.jpg",
+    "seen": false,
+    "stories": [
+      {
+        "id": 7,
+        "url": "../../assets/images/IMG_20201017_150630.jpg"
+      },
+      {
+        "id": 8,
+        "url": "../../assets/images/IMG_20201017_150630.jpg"
+      },
+      {
+        "id": 9,
+        "url": "../../assets/images/IMG_20201017_150630.jpg"
+      }
+    ]
+  },
+  {
+    "userId": 10,
+    "userName": "user_10",
+    "userPhotoUrl": "../../assets/images/IMG_20210109_153553.jpg",
+    "seen": false,
+    "stories": [
+      {
+        "id": 1,
+        "url": "../../assets/images/IMG_20201017_150630.jpg"
+      },
+      {
+        "id": 2,
+        "url": "../../assets/images/IMG_20201017_150630.jpg"
+      },
+      {
+        "id": 3,
+        "url": "../../assets/images/IMG_20201017_150630.jpg"
+      }
+    ]
+  },
+  {
+    "userId": 11,
+    "userName": "user_12",
+    "userPhotoUrl": "../../assets/images/IMG_20210109_153553.jpg",
+    "seen": false,
+    "stories": [
+      {
+        "id": 4,
+        "url": "../../assets/images/IMG_20201017_150630.jpg"
+      },
+      {
+        "id": 5,
+        "url": "../../assets/images/IMG_20201017_150630.jpg"
+      },
+      {
+        "id": 6,
+        "url": "../../assets/images/IMG_20201017_150630.jpg"
+      }
+    ]
+  },
+  {
+    "userId": 12,
+    "userName": "user_12",
+    "userPhotoUrl": "../../assets/images/IMG_20210109_153553.jpg",
+    "seen": false,
+    "stories": [
+      {
+        "id": 7,
+        "url": "../../assets/images/IMG_20201017_150630.jpg"
+      },
+      {
+        "id": 8,
+        "url": "../../assets/images/IMG_20201017_150630.jpg"
+      },
+      {
+        "id": 9,
+        "url": "../../assets/images/IMG_20201017_150630.jpg"
+      }
+    ]
+  }
+]

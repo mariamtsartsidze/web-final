@@ -90,7 +90,7 @@ export class AppHeader extends BaseElement {
           <div class="search-field">
             <input type="text" placeholder="search" class="search-input" />
           </div>
-          <div class="shortcuts">
+          <div class="shortcuts" @click=${this._onHomeRedirect}>
             <iron-icon icon="home" class="shortcut"></iron-icon>
             <iron-icon icon="communication:message" class="shortcut"></iron-icon>
             <iron-icon icon="thumb-up" class="shortcut"></iron-icon>

@@ -7,6 +7,7 @@
 
   /* layout sizes */
   --header-height: 54px;
+  --post-width: 616px;
 
   /* logo */
   --logo-height: 29px;
@@ -18,6 +19,10 @@
 
   /* shortcuts */
   --shortcut-left-margin: 22px;
+
+  /* radiuses */
+  --radius-4: 4px;
+  --radius-round: 50%;
 
   --tester-purple: purple;
 }

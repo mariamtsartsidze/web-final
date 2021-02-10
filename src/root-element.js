@@ -10,6 +10,8 @@ export class RootElement extends BaseElement {
       .content {
         padding-top: calc(var(--header-height) + 1px);
         display: flex;
+        flex-direction: row;
+        justify-content: center;
         background-color: var(--background-white);
       }
     `;

@@ -1,10 +1,16 @@
 import { html, css } from 'lit-element';
-import './post-element';
 import { BaseElement } from '../../base-element';
+import './post-element';
+import './stories-card';
 
 export class NewsFeed extends BaseElement {
   static get styles() {
     return css`
+      .stories-card {
+        margin-top: 24px;
+        margin-bottom: 24px;
+      }
+
       .post {
         margin-bottom: 24px;
       }
@@ -27,7 +33,10 @@ export class NewsFeed extends BaseElement {
   }
 
   render() {
-    return html` ${this.newsFeed.map((post) => html` <div class="post"><post-element .imgUrl=${post.url}></post-element></div> `)} `;
+    return html`
+      <stories-card class="stories-card"></stories-card>
+      ${this.newsFeed.map((post) => html`<post-element .imgUrl=${post.url} class="post"></post-element>`)}
+    `;
   }
 }
 
