@@ -24,5 +24,9 @@
   --radius-4: 4px;
   --radius-round: 50%;
 
+  /* stories */
+  --not-seen-border: rgb(167, 81, 201);
+  --seen-border: rgb(216, 216, 216);
+
   --tester-purple: purple;
 }

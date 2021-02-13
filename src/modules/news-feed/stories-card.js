@@ -1,6 +1,7 @@
 import { html, css } from 'lit-element';
-import './post-element';
 import { BaseElement } from '../../base-element';
+import './post-element';
+import '../../common/story-player';
 
 export class StoriesCard extends BaseElement {
   static get styles() {
@@ -37,11 +38,11 @@ export class StoriesCard extends BaseElement {
       }
 
       .not-seen-story {
-        border: 2px solid purple;
+        border: 2px solid var(--not-seen-border);
       }
 
       .seen-story {
-        border: 2px solid gray;
+        border: 2px solid var(--seen-border);
       }
 
       .story-pic-wrapper-border {
@@ -79,13 +80,23 @@ export class StoriesCard extends BaseElement {
     this.stories = [];
   }
 
-  async firstUpdated() {
-    this.stories = await this.storiesApi.allStories(1);
-    console.log('stories: ', this.stories);
-  }
-
-  _onStoryOpen(stories) {
-    console.log(stories);
+  _onStoryOpen(userStories, index) {
+    console.log(userStories);
+    userStories.seen = true;
+    this.stories = this.stories.map((story) => {
+      if (story.userId === userStories.userId) {
+        story.seen = true;
+      }
+      return story;
+    });
+    
+    this.dispatchEvent(
+      new CustomEvent('story-opened', {
+        detail: { stories: this.stories, userId: userStories.userId, index: index },
+        bubbles: true,
+        composed: true,
+      })
+    );
   }
 
   _onStoryClose() {}
@@ -94,8 +105,8 @@ export class StoriesCard extends BaseElement {
     return html`
       <div class="card">
         ${this.stories.map(
-          (userStories) => html`
-            <div class="story-wrapper" @click=${() => this._onStoryOpen(userStories.stories)}>
+          (userStories, i) => html`
+            <div class="story-wrapper" @click=${() => this._onStoryOpen(userStories, i)}>
               <div class="story-pic-wrapper-border ${userStories.seen ? 'seen-story' : 'not-seen-story'}">
                 <div class="story-pic-wrapper">
                   <img class="story-pic" src="${userStories.userPhotoUrl}" />
