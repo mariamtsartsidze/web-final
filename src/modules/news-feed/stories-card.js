@@ -81,15 +81,6 @@ export class StoriesCard extends BaseElement {
   }
 
   _onStoryOpen(userStories, index) {
-    console.log(userStories);
-    userStories.seen = true;
-    this.stories = this.stories.map((story) => {
-      if (story.userId === userStories.userId) {
-        story.seen = true;
-      }
-      return story;
-    });
-    
     this.dispatchEvent(
       new CustomEvent('story-opened', {
         detail: { stories: this.stories, userId: userStories.userId, index: index },

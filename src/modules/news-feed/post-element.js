@@ -67,10 +67,6 @@ export class PostElement extends BaseElement {
     super();
   }
 
-  updated() {
-    // console.log(this.imgUrl);
-  }
-
   render() {
     return html`
       <div class="card">

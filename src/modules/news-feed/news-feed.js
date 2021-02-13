@@ -37,15 +37,19 @@ export class NewsFeed extends BaseElement {
   }
 
   _playerOpened(e) {
-    console.log('opened: ', e.detail);
     this.shadowRoot.getElementById('player').openStory(e.detail.index);
+  }
+
+  _storySeen(e) {
+    this.stories[e.detail.index].seen = true;
+    this.stories = [...this.stories];
   }
 
   render() {
     return html`
       <stories-card class="stories-card" .stories=${this.stories} @story-opened=${this._playerOpened}></stories-card>
       ${this.newsFeed.map((post) => html`<post-element .imgUrl=${post.url} class="post"></post-element>`)}
-      <story-player id="player" .stories=${this.stories} .index=${1}></story-player>
+      <story-player id="player" .stories=${this.stories} @story-seen=${this._storySeen}></story-player>
     `;
   }
 }
