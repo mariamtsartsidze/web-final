@@ -3,6 +3,10 @@ import { BaseElement } from './base-element';
 import { Router } from '@vaadin/router';
 import { routes } from './routes';
 import './common/app-header';
+import '@polymer/iron-icons/iron-icons';
+import '@polymer/iron-icons/communication-icons';
+import '@polymer/iron-icons/social-icons';
+
 
 export class RootElement extends BaseElement {
   static get styles() {
