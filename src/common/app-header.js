@@ -81,17 +81,21 @@ export class AppHeader extends BaseElement {
         height: 30px;
         width: 30px;
         border-radius: var(--radius-round);
-        margin-right: 8px;
       }
 
       .user-pic {
         display: block;
-        max-height: 30px;
+        width: 30px;
+        height: 30px;
       }
 
       @media (max-width: 1024px) {
         .nav-bar {
           width: 80%;
+        }
+
+        .search-field {
+          margin: 0 24px;
         }
       }
 
@@ -100,13 +104,21 @@ export class AppHeader extends BaseElement {
           --search-input-size: 128px;
           --shortcuts-margin: 10px;
         }
-        
+
         .nav-bar {
           width: 100%;
         }
 
+        .search-field {
+          margin: 0 0;
+        }
+
         .home-button {
           margin-left: 12px;
+        }
+
+        .logout-button {
+          margin-right: 8px;
         }
 
         .logo {
@@ -139,6 +151,11 @@ export class AppHeader extends BaseElement {
     Router.go('timeline');
   }
 
+  async logOut() {
+    await this.userApi.logOut();
+    Router.go('/');
+  }
+
   render() {
     return html`
       <div class="header sticky">
@@ -157,6 +174,7 @@ export class AppHeader extends BaseElement {
                 <img class="user-pic" src="${this.loggedUser.photoUrl ? this.loggedUser.photoUrl : this.noAvatarUrl}" />
               </div>
             </div>
+            <iron-icon icon="arrow-forward" class="shortcut logout-button" @click=${this.logOut}></iron-icon>
           </div>
         </div>
       </div>

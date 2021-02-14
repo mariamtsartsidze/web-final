@@ -39,9 +39,9 @@ export class UserApi extends BaseApi {
     return !!foundUser;
   }
 
-  async logout() {
+  async logOut() {
     localStorage.removeItem('userInfo');
-    localStorage.setItem('loggedIn', false);
+    localStorage.removeItem('loggedIn');
   }
 
   async getFollowers(userId) {
