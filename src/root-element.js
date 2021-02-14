@@ -44,8 +44,11 @@ export class RootElement extends BaseElement {
 
     router.setRoutes(routes);
 
-    window.addEventListener('vaadin-router-location-changed', event => {
+    window.addEventListener('vaadin-router-location-changed', e => {
       this.loggedIn = !!localStorage.getItem('loggedIn');
+      if(this.loggedIn && window.location.pathname === '/') {
+        Router.go('newsfeed');
+      }
     });
   }
 
