@@ -45,6 +45,26 @@ export class PostElement extends BaseElement {
           margin-left: 16px;
         }
 
+        .image-author {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+        }
+
+        .user-pic-wrapper {
+          overflow: hidden;
+          height: 30px;
+          width: 30px;
+          border-radius: var(--radius-round);
+          margin-right: 12px;
+        }
+
+        .user-pic {
+          display: block;
+          width: 30px;
+          height: 30px;
+        }
+
         @media (max-width: 600px) {
           :host {
             --card-width: calc(100% - 2px);
@@ -60,6 +80,9 @@ export class PostElement extends BaseElement {
         type: String,
         attribute: 'imgUrl',
       },
+      author: {
+        type: Object,
+      },
     };
   }
 
@@ -70,7 +93,14 @@ export class PostElement extends BaseElement {
   render() {
     return html`
       <div class="card">
-        <div class="header border-box"></div>
+        <div class="header border-box">
+          <div class="image-author">
+            <div class="user-pic-wrapper">
+              <img class="user-pic" src=${this.author.imgUrl} />
+            </div>
+            <div>${this.author.username}</div>
+          </div>
+        </div>
         <div class="content">
           <img src="${this.imgUrl}" />
         </div>

@@ -2,196 +2,352 @@
   {
     "desctiption": "my pic 1",
     "url": "../../assets/images/IMG_20201017_150630.jpg",
-    "userId": 1
+    "author":{
+      "userId": 1,
+      "imgUrl": "../../assets/images/IMG_20210109_153553.jpg",
+      "username": "user_01"
+    }
   },
   {
     "desctiption": "my pic 2",
     "url": "../../assets/images/IMG_20210109_153553.jpg",
-    "userId": 2
+    "author":{
+      "userId": 2,
+      "imgUrl": "../../assets/images/IMG_20201017_150630.jpg",
+      "username": "user_02"
+    }
   },
   {
     "desctiption": "my pic 3",
     "url": "../../assets/images/IMG_20201017_150630.jpg",
-    "userId": 3
+    "author":{
+      "userId": 3,
+      "imgUrl": "../../assets/images/IMG_20201017_150630.jpg",
+      "username": "user_03"
+    }
   },
   {
     "desctiption": "my pic 4",
     "url": "../../assets/images/IMG_20210109_153553.jpg",
-    "userId": 1
+    "author":{
+      "userId": 1,
+      "imgUrl": "../../assets/images/IMG_20201017_150630.jpg",
+      "username": "user_01"
+    }
   },
   {
     "desctiption": "my pic 5",
     "url": "../../assets/images/IMG_20201017_150630.jpg",
-    "userId": 2
+    "author":{
+      "userId": 2,
+      "imgUrl": "../../assets/images/IMG_20201017_150630.jpg",
+      "username": "user_02"
+    }
   },
   {
     "desctiption": "my pic 6",
     "url": "../../assets/images/IMG_20210109_153553.jpg",
-    "userId": 3
+    "author":{
+      "userId": 3,
+      "imgUrl": "../../assets/images/IMG_20201017_150630.jpg",
+      "username": "user_03"
+    }
   },
   {
     "desctiption": "my pic 7",
     "url": "../../assets/images/IMG_20201017_150630.jpg",
-    "userId": 1
+    "author":{
+      "userId": 1,
+      "imgUrl": "../../assets/images/IMG_20201017_150630.jpg",
+      "username": "user_01"
+    }
   },
   {
     "desctiption": "my pic 8",
     "url": "../../assets/images/IMG_20201017_150630.jpg",
-    "userId": 2
+    "author":{
+      "userId": 2,
+      "imgUrl": "../../assets/images/IMG_20201017_150630.jpg",
+      "username": "user_01"
+    }
   },
   {
     "desctiption": "my pic 9",
     "url": "../../assets/images/IMG_20201017_150630.jpg",
-    "userId": 3
+    "author":{
+      "userId": 3,
+      "imgUrl": "../../assets/images/IMG_20201017_150630.jpg",
+      "username": "user_01"
+    }
   },
   {
     "desctiption": "my pic 10",
     "url": "../../assets/images/IMG_20201017_150630.jpg",
-    "userId": 1
+    "author":{
+      "userId": 1,
+      "imgUrl": "../../assets/images/IMG_20210109_153553.jpg",
+      "username": "user_01"
+    }
   },
   {
     "desctiption": "my pic 11",
     "url": "../../assets/images/IMG_20201017_150630.jpg",
-    "userId": 1
+    "author":{
+      "userId": 1,
+      "imgUrl": "../../assets/images/IMG_20210109_153553.jpg",
+      "username": "user_01"
+    }
   },
   {
     "desctiption": "my pic 12",
     "url": "../../assets/images/IMG_20201017_150630.jpg",
-    "userId": 2
+    "author":{
+      "userId": 2,
+      "imgUrl": "../../assets/images/IMG_20201017_150630.jpg",
+      "username": "user_01"
+    }
   },
   {
     "desctiption": "my pic 13",
     "url": "../../assets/images/IMG_20201017_150630.jpg",
-    "userId": 3
+    "author":{
+      "userId": 3,
+      "imgUrl": "../../assets/images/IMG_20201017_150630.jpg",
+      "username": "user_01"
+    }
   },
   {
     "desctiption": "my pic 14",
     "url": "../../assets/images/IMG_20201017_150630.jpg",
-    "userId": 1
+    "author":{
+      "userId": 1,
+      "imgUrl": "../../assets/images/IMG_20210109_153553.jpg",
+      "username": "user_01"
+    }
   },
   {
     "desctiption": "my pic 15",
     "url": "../../assets/images/IMG_20201017_150630.jpg",
-    "userId": 2
+    "author":{
+      "userId": 2,
+      "imgUrl": "../../assets/images/IMG_20201017_150630.jpg",
+      "username": "user_01"
+    }
   },
   {
     "desctiption": "my pic 16",
     "url": "../../assets/images/IMG_20201017_150630.jpg",
-    "userId": 3
+    "author":{
+      "userId": 3,
+      "imgUrl": "../../assets/images/IMG_20201017_150630.jpg",
+      "username": "user_01"
+    }
   },
   {
     "desctiption": "my pic 17",
     "url": "../../assets/images/IMG_20201017_150630.jpg",
-    "userId": 1
+    "author":{
+      "userId": 1,
+      "imgUrl": "../../assets/images/IMG_20210109_153553.jpg",
+      "username": "user_01"
+    }
   },
   {
     "desctiption": "my pic 18",
     "url": "../../assets/images/IMG_20201017_150630.jpg",
-    "userId": 2
+    "author":{
+      "userId": 2,
+      "imgUrl": "../../assets/images/IMG_20201017_150630.jpg",
+      "username": "user_01"
+    }
   },
   {
     "desctiption": "my pic 19",
     "url": "../../assets/images/IMG_20201017_150630.jpg",
-    "userId": 3
+    "author":{
+      "userId": 3,
+      "imgUrl": "../../assets/images/IMG_20201017_150630.jpg",
+      "username": "user_01"
+    }
   },
   {
     "desctiption": "my pic 20",
     "url": "../../assets/images/IMG_20201017_150630.jpg",
-    "userId": 1
+    "author":{
+      "userId": 1,
+      "imgUrl": "../../assets/images/IMG_20210109_153553.jpg",
+      "username": "user_01"
+    }
   },
   {
     "desctiption": "my pic 21",
     "url": "../../assets/images/IMG_20201017_150630.jpg",
-    "userId": 1
+    "author":{
+      "userId": 1,
+      "imgUrl": "../../assets/images/IMG_20210109_153553.jpg",
+      "username": "user_01"
+    }
   },
   {
     "desctiption": "my pic 22",
     "url": "../../assets/images/IMG_20201017_150630.jpg",
-    "userId": 2
+    "author":{
+      "userId": 2,
+      "imgUrl": "../../assets/images/IMG_20201017_150630.jpg",
+      "username": "user_01"
+    }
   },
   {
     "desctiption": "my pic 23",
     "url": "../../assets/images/IMG_20201017_150630.jpg",
-    "userId": 3
+    "author":{
+      "userId": 3,
+      "imgUrl": "../../assets/images/IMG_20201017_150630.jpg",
+      "username": "user_01"
+    }
   },
   {
     "desctiption": "my pic 24",
     "url": "../../assets/images/IMG_20201017_150630.jpg",
-    "userId": 1
+    "author":{
+      "userId": 1,
+      "imgUrl": "../../assets/images/IMG_20210109_153553.jpg",
+      "username": "user_01"
+    }
   },
   {
     "desctiption": "my pic 25",
     "url": "../../assets/images/IMG_20201017_150630.jpg",
-    "userId": 2
+    "author":{
+      "userId": 2,
+      "imgUrl": "../../assets/images/IMG_20201017_150630.jpg",
+      "username": "user_01"
+    }
   },
   {
     "desctiption": "my pic 26",
     "url": "../../assets/images/IMG_20201017_150630.jpg",
-    "userId": 3
+    "author":{
+      "userId": 3,
+      "imgUrl": "../../assets/images/IMG_20201017_150630.jpg",
+      "username": "user_01"
+    }
   },
   {
     "desctiption": "my pic 27",
     "url": "../../assets/images/IMG_20201017_150630.jpg",
-    "userId": 1
+    "author":{
+      "userId": 1,
+      "imgUrl": "../../assets/images/IMG_20210109_153553.jpg",
+      "username": "user_01"
+    }
   },
   {
     "desctiption": "my pic 28",
     "url": "../../assets/images/IMG_20201017_150630.jpg",
-    "userId": 2
+    "author":{
+      "userId": 2,
+      "imgUrl": "../../assets/images/IMG_20201017_150630.jpg",
+      "username": "user_01"
+    }
   },
   {
     "desctiption": "my pic 29",
     "url": "../../assets/images/IMG_20201017_150630.jpg",
-    "userId": 3
+    "author":{
+      "userId": 3,
+      "imgUrl": "../../assets/images/IMG_20201017_150630.jpg",
+      "username": "user_01"
+    }
   },
   {
     "desctiption": "my pic 30",
     "url": "../../assets/images/IMG_20201017_150630.jpg",
-    "userId": 1
+    "author":{
+      "userId": 1,
+      "imgUrl": "../../assets/images/IMG_20210109_153553.jpg",
+      "username": "user_01"
+    }
   },
   {
     "desctiption": "my pic 31",
     "url": "../../assets/images/IMG_20201017_150630.jpg",
-    "userId": 1
+    "author":{
+      "userId": 1,
+      "imgUrl": "../../assets/images/IMG_20210109_153553.jpg",
+      "username": "user_01"
+    }
   },
   {
     "desctiption": "my pic 32",
     "url": "../../assets/images/IMG_20201017_150630.jpg",
-    "userId": 2
+    "author":{
+      "userId": 2,
+      "imgUrl": "../../assets/images/IMG_20201017_150630.jpg",
+      "username": "user_01"
+    }
   },
   {
     "desctiption": "my pic 33",
     "url": "../../assets/images/IMG_20201017_150630.jpg",
-    "userId": 3
+    "author":{
+      "userId": 3,
+      "imgUrl": "../../assets/images/IMG_20201017_150630.jpg",
+      "username": "user_01"
+    }
   },
   {
     "desctiption": "my pic 34",
     "url": "../../assets/images/IMG_20201017_150630.jpg",
-    "userId": 1
+    "author":{
+      "userId": 1,
+      "imgUrl": "../../assets/images/IMG_20210109_153553.jpg",
+      "username": "user_01"
+    }
   },
   {
     "desctiption": "my pic 35",
     "url": "../../assets/images/IMG_20201017_150630.jpg",
-    "userId": 2
+    "author":{
+      "userId": 2,
+      "imgUrl": "../../assets/images/IMG_20201017_150630.jpg",
+      "username": "user_01"
+    }
   },
   {
     "desctiption": "my pic 36",
     "url": "../../assets/images/IMG_20201017_150630.jpg",
-    "userId": 3
+    "author":{
+      "userId": 3,
+      "imgUrl": "../../assets/images/IMG_20201017_150630.jpg",
+      "username": "user_01"
+    }
   },
   {
     "desctiption": "my pic 37",
     "url": "../../assets/images/IMG_20201017_150630.jpg",
-    "userId": 1
+    "author":{
+      "userId": 1,
+      "imgUrl": "../../assets/images/IMG_20210109_153553.jpg",
+      "username": "user_01"
+    }
   },
   {
     "desctiption": "my pic 38",
     "url": "../../assets/images/IMG_20201017_150630.jpg",
-    "userId": 2
+    "author":{
+      "userId": 2,
+      "imgUrl": "../../assets/images/IMG_20201017_150630.jpg",
+      "username": "user_01"
+    }
   },
   {
     "desctiption": "my pic 39",
     "url": "../../assets/images/IMG_20201017_150630.jpg",
-    "userId": 3
+    "author":{
+      "userId": 3,
+      "imgUrl": "../../assets/images/IMG_20201017_150630.jpg",
+      "username": "user_01"
+    }
   }
 ]
