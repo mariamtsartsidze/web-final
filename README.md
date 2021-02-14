@@ -17,7 +17,5 @@ backend: fake API using json files and localstorage help
 
 
 **test user:**
-
-username: user_01
-
-password: password1
+- username: user_01
+- password: password1
