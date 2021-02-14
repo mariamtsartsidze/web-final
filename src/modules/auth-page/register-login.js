@@ -118,10 +118,10 @@ export class RegisterLogin extends BaseElement {
 
   get _registerForm() {
     return html`
-      <label for="lname">Last Name:</label>
-      <input type="text" id="last-name" name="lname" /><br /><br />
       <label for="fname">First Name:</label>
       <input type="text" id="first-name" name="fname" /><br /><br />
+      <label for="lname">Last Name:</label>
+      <input type="text" id="last-name" name="lname" /><br /><br />
       <label for="uname">Username:</label>
       <input type="text" id="reg-username" name="uname" /><br /><br />
       <label for="pass">Password:</label>

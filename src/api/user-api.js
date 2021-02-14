@@ -49,7 +49,10 @@ export class UserApi extends BaseApi {
       this.usersData = await this.get('/src/api/data/users.json');
     }
     const foundUser = this.usersData.find((user) => user.id === userId);
-    return foundUser.followers || [];
+    if(foundUser) {
+      return foundUser.followers;
+    }
+    return [];
   }
 
   async getFollowing(userId) {
@@ -57,6 +60,9 @@ export class UserApi extends BaseApi {
       this.usersData = await this.get('/src/api/data/users.json');
     }
     const foundUser = this.usersData.find((user) => user.id === userId);
-    return foundUser.following || [];
+    if(foundUser) {
+      return foundUser.followers;
+    }
+    return [];
   }
 }

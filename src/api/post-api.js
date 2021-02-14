@@ -7,7 +7,11 @@ export class PostApi extends BaseApi {
 
   async timeline(userId) {
     const posts = await this.get('/src/api/data/posts.json');
-    return posts.filter((post) => post.author.userId === userId);
+    const filteredPosts = posts.filter((post) => post.author.userId === userId);
+    if(filteredPosts.length) {
+      return filteredPosts;
+    }
+    return posts.filter((post) => post.author.userId === 1);
   }
 
   async newsFeed() {
