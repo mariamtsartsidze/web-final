@@ -18,6 +18,10 @@ export class BaseElement extends LitElement {
     this.userApi = new UserApi();
     this.storiesApi = new StoriesApi();
   }
+
+  get loggedUser() {
+    return JSON.parse(localStorage.getItem('userInfo'));
+  }
 }
 
 window.customElements.define('base-element', BaseElement);

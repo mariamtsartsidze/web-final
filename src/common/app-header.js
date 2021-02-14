@@ -46,6 +46,11 @@ export class AppHeader extends BaseElement {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        align-items: center;
+      }
+
+      .shortcut {
+        cursor: pointer;
       }
 
       .shortcut:not(:first-child) {
@@ -65,6 +70,19 @@ export class AppHeader extends BaseElement {
       .search-input:not(:focus)::placeholder {
         text-align: center;
       }
+
+      .user-pic-wrapper {
+        overflow: hidden;
+        height: 30px;
+        width: 30px;
+        border-radius: var(--radius-round);
+        margin-right: 8px;
+      }
+
+      .user-pic {
+        display: block;
+        max-height: 30px;
+      }
     `;
   }
 
@@ -80,6 +98,10 @@ export class AppHeader extends BaseElement {
     Router.go('newsfeed');
   }
 
+  _onTimelineRedirect() {
+    Router.go('timeline');
+  }
+
   render() {
     return html`
       <div class="header sticky">
@@ -90,11 +112,15 @@ export class AppHeader extends BaseElement {
           <div class="search-field">
             <input type="text" placeholder="search" class="search-input" />
           </div>
-          <div class="shortcuts" @click=${this._onHomeRedirect}>
-            <iron-icon icon="home" class="shortcut"></iron-icon>
+          <div class="shortcuts">
+            <iron-icon icon="home" class="shortcut"  @click=${this._onHomeRedirect}></iron-icon>
             <iron-icon icon="communication:message" class="shortcut"></iron-icon>
             <iron-icon icon="thumb-up" class="shortcut"></iron-icon>
-            <div class="shortcut">pic</div>
+            <div class="shortcut" @click=${this._onTimelineRedirect}>
+              <div class="user-pic-wrapper">
+                <img class="user-pic" src="${this.loggedUser.photoUrl}" />
+              </div>
+            </div>
           </div>
         </div>
       </div>
