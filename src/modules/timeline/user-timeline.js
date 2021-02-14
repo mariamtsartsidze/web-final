@@ -123,7 +123,6 @@ export class UserTimeline extends BaseElement {
     this.timeline = await this.postApi.timeline(this.loggedUser.id);
     this.followers = await this.userApi.getFollowers(this.loggedUser.id);
     this.following = await this.userApi.getFollowing(this.loggedUser.id);
-    console.log('timeline: ', this.timeline, this.followers, this.following);
   }
 
   render() {

@@ -49,7 +49,6 @@ export class UserApi extends BaseApi {
       this.usersData = await this.get('/src/api/data/users.json');
     }
     const foundUser = this.usersData.find((user) => user.id === userId);
-    console.log('found: ', foundUser);
     return foundUser.followers || [];
   }
 

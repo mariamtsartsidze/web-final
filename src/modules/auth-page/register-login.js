@@ -74,7 +74,6 @@ export class RegisterLogin extends BaseElement {
   async login() {
     const username = this.shadowRoot.getElementById('username').value;
     const password = this.shadowRoot.getElementById('password').value;
-    console.log(username, password);
     if (username && password) {
       const loggedIn = await this.userApi.login(username, password);
       if (loggedIn) {
@@ -92,7 +91,6 @@ export class RegisterLogin extends BaseElement {
     const password = this.shadowRoot.getElementById('reg-password').value;
     const firstName = this.shadowRoot.getElementById('first-name').value;
     const lastName = this.shadowRoot.getElementById('last-name').value;
-    console.log(username, password, firstName, lastName);
     if (username && password && firstName && lastName) {
       let registered = await this.userApi.register({ username, password, firstName, lastName });
       if (registered) {
