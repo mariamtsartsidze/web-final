@@ -39,7 +39,6 @@ export class RootElement extends BaseElement {
     const router = new Router(outlet, { baseUrl: '/' });
 
     router.setRoutes(routes);
-    console.log('firstupdated');
 
     window.addEventListener('vaadin-router-location-changed', event => {
       this.loggedIn = !!localStorage.getItem('loggedIn');
@@ -47,7 +46,6 @@ export class RootElement extends BaseElement {
   }
 
   render() {
-    console.log('render2: ', this.userIsLoggedIn);
     return html`
       ${this.loggedIn ? html` <app-header></app-header> ` : ''}
       <div class="content ${this.loggedIn ? 'content-padding' : ''}">
