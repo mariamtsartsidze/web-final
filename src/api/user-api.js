@@ -13,8 +13,10 @@ export class UserApi extends BaseApi {
     }
     const userExists = this.usersData.find((user) => user.username === userInfo.username);
     if (!userExists) {
+      userInfo.id = this.usersData.length + 1;
       this.usersData.push(userInfo);
-      this.storeLogin(userInfo);
+      const { id, username, firstName, lastName } = userInfo;
+      this.storeLogin({ id, username, firstName, lastName });
       return true;
     }
     return false;
@@ -31,7 +33,8 @@ export class UserApi extends BaseApi {
     }
     const foundUser = this.usersData.find((user) => user.username === username && user.password === password);
     if (foundUser) {
-      this.storeLogin(foundUser);
+      const { id, username, firstName, lastName, photoUrl } = foundUser;
+      this.storeLogin({ id, username, firstName, lastName, photoUrl });
     }
     return !!foundUser;
   }
@@ -39,5 +42,22 @@ export class UserApi extends BaseApi {
   async logout() {
     localStorage.removeItem('userInfo');
     localStorage.setItem('loggedIn', false);
+  }
+
+  async getFollowers(userId) {
+    if (this.usersData.length === 0) {
+      this.usersData = await this.get('/src/api/data/users.json');
+    }
+    const foundUser = this.usersData.find((user) => user.id === userId);
+    console.log('found: ', foundUser);
+    return foundUser.followers || [];
+  }
+
+  async getFollowing(userId) {
+    if (this.usersData.length === 0) {
+      this.usersData = await this.get('/src/api/data/users.json');
+    }
+    const foundUser = this.usersData.find((user) => user.id === userId);
+    return foundUser.following || [];
   }
 }

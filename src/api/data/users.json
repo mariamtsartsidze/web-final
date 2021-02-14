@@ -5,7 +5,43 @@
     "password": "password1",
     "firstName": "Amanda",
     "lastName": "Palmer",
-    "photoUrl": "../../assets/images/IMG_20210109_153553.jpg"
+    "photoUrl": "../../assets/images/IMG_20210109_153553.jpg",
+    "followers": [
+      {
+        "id": 2,
+        "username": "user_02",
+        "password": "password2",
+        "firstName": "John",
+        "lastName": "Locke",
+        "photoUrl": "../../assets/images/IMG_20210109_153553.jpg"
+      },
+      {
+        "id": 3,
+        "username": "user_03",
+        "password": "password3",
+        "firstName": "Jack",
+        "lastName": "Shepherd",
+        "photoUrl": "../../assets/images/IMG_20210109_153553.jpg"
+      }
+    ],
+    "following": [
+      {
+        "id": 2,
+        "username": "user_02",
+        "password": "password2",
+        "firstName": "John",
+        "lastName": "Locke",
+        "photoUrl": "../../assets/images/IMG_20210109_153553.jpg"
+      },
+      {
+        "id": 3,
+        "username": "user_03",
+        "password": "password3",
+        "firstName": "Jack",
+        "lastName": "Shepherd",
+        "photoUrl": "../../assets/images/IMG_20210109_153553.jpg"
+      }
+    ]
   },
   {
     "id": 2,

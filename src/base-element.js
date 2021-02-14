@@ -8,7 +8,8 @@ export class BaseElement extends LitElement {
     return {
       postApi: { type: Object },
       userApi: { type: Object },
-      storiesApi: { tyoe: Object },
+      storiesApi: { type: Object },
+      noAvatarUrl: { type: String },
     };
   }
 
@@ -17,6 +18,7 @@ export class BaseElement extends LitElement {
     this.postApi = new PostApi();
     this.userApi = new UserApi();
     this.storiesApi = new StoriesApi();
+    this.noAvatarUrl = '../../assets/images/no-avatar.png';
   }
 
   get loggedUser() {

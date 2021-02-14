@@ -21,6 +21,10 @@ export class RootElement extends BaseElement {
         background-color: var(--background-white);
         height: 100%;
       }
+
+      .outlet {
+        width: 100%;
+      }
     `;
   }
 
@@ -49,7 +53,7 @@ export class RootElement extends BaseElement {
     return html`
       ${this.loggedIn ? html` <app-header></app-header> ` : ''}
       <div class="content ${this.loggedIn ? 'content-padding' : ''}">
-        <div id="outlet"></div>
+        <div id="outlet" class="outlet"></div>
       </div>
     `;
   }

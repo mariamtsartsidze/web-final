@@ -113,12 +113,12 @@ export class AppHeader extends BaseElement {
             <input type="text" placeholder="search" class="search-input" />
           </div>
           <div class="shortcuts">
-            <iron-icon icon="home" class="shortcut"  @click=${this._onHomeRedirect}></iron-icon>
+            <iron-icon icon="home" class="shortcut" @click=${this._onHomeRedirect}></iron-icon>
             <iron-icon icon="communication:message" class="shortcut"></iron-icon>
             <iron-icon icon="thumb-up" class="shortcut"></iron-icon>
             <div class="shortcut" @click=${this._onTimelineRedirect}>
               <div class="user-pic-wrapper">
-                <img class="user-pic" src="${this.loggedUser.photoUrl}" />
+                <img class="user-pic" src="${this.loggedUser.photoUrl ? this.loggedUser.photoUrl : this.noAvatarUrl}" />
               </div>
             </div>
           </div>

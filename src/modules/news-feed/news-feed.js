@@ -7,6 +7,12 @@ import '../../common/story-player';
 export class NewsFeed extends BaseElement {
   static get styles() {
     return css`
+      :host {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+      }
+
       .stories-card {
         margin-top: 24px;
         margin-bottom: 24px;
