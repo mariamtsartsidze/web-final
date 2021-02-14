@@ -1,9 +1,9 @@
 export const routes = [
   {
     path: '/',
-    component: 'news-feed',
+    component: 'register-login',
     action: async () => {
-      await import('./modules/news-feed/news-feed');
+      await import('./modules/auth-page/register-login');
     },
   },
   {
@@ -18,6 +18,13 @@ export const routes = [
     component: 'user-timeline',
     action: async () => {
       await import('./modules/timeline/user-timeline');
+    },
+  },
+  {
+    path: 'auth',
+    component: 'register-login',
+    action: async () => {
+      await import('./modules/auth-page/register-login');
     },
   },
 ];

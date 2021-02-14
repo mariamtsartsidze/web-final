@@ -32,6 +32,7 @@ const copyConfig = {
       src: 'styles.css',
       dest: 'build/modern',
     },
+    { src: '_redirects', dest: 'build/modern' },
     { src: 'src/api', dest: 'build/modern/src' },
   ],
 };
