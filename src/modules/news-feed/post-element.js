@@ -47,7 +47,7 @@ export class PostElement extends BaseElement {
 
         @media (max-width: 600px) {
           :host {
-            --card-width: 100%;
+            --card-width: calc(100% - 2px);
           }
         }
       `,

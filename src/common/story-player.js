@@ -107,9 +107,23 @@ export class StoryPlayer extends BaseElement {
           max-height: calc(var(--card-height) - 64px);
         }
 
+        .left-arrow-container {
+          position: absolute;
+          top: 50%;
+          left: -32px;
+          transform: translateY(-50%);
+        }
+
+        .right-arrow-container {
+          position: absolute;
+          top: 50%;
+          right: -32px;
+          transform: translateY(-50%);
+        }
+
         @media (max-width: 600px) {
           :host {
-            --card-width: 100vw;
+            --card-width: calc(100vw - 2px);
             --card-height: calc(100vh - 64px);
           }
 
@@ -117,8 +131,24 @@ export class StoryPlayer extends BaseElement {
             top: 64px;
           }
 
+          .story-card {
+            margin: 0;
+          }
+
           .arrow-container {
             display: none;
+          }
+
+          .left-arrow-container {
+            display: block;
+            position: absolute;
+            left: 6px;
+          }
+
+          .right-arrow-container {
+            display: block;
+            position: absolute;
+            right: 4px;
           }
         }
       `,
@@ -191,9 +221,6 @@ export class StoryPlayer extends BaseElement {
       ${this.stories && this.stories.length
         ? html` <div class="overlay">
             <div class="story-modal">
-              <div class="arrow-container" @click=${() => this.previousStory()}>
-                <iron-icon icon="chevron-left" class="left-arrow"></iron-icon>
-              </div>
               <div class="story-card">
                 <div class="header border-box">
                   <div class="user-container">
@@ -207,9 +234,12 @@ export class StoryPlayer extends BaseElement {
                 <div class="story-container">
                   <img class="story-img" src="${this.stories[this.index].stories[this.userStoryIndex].url}" />
                 </div>
-              </div>
-              <div class="arrow-container" @click=${() => this.nextStory()}>
-                <iron-icon icon="chevron-right" class="right-arrow"></iron-icon>
+                <div class="left-arrow-container arrow-container" @click=${() => this.previousStory()}>
+                  <iron-icon icon="chevron-left" class="resp-left-arrow"></iron-icon>
+                </div>
+                <div class="right-arrow-container arrow-container" @click=${() => this.nextStory()}>
+                  <iron-icon icon="chevron-right" class="resp-right-arrow"></iron-icon>
+                </div>
               </div>
             </div>
           </div>`

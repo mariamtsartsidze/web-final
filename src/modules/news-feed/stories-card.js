@@ -69,7 +69,7 @@ export class StoriesCard extends BaseElement {
 
       @media (max-width: 600px) {
         :host {
-          --card-width: 100vw;
+          --card-width: calc(100vw - 2px);
         }
       }
     `;
