@@ -8,7 +8,7 @@
     "start": "NODE_ENV=development es-dev-server --node-resolve --app-index index.html --watch",
     "serve": "es-dev-server --node-resolve --app-index index.html --watch",
     "build": "echo \"This is not a TypeScript project, so no need to build.\"",
-    "build:modern": "rimraf builds/modern && rollup -c rollup-modern.config.js",
+    "build:modern": "rimraf build/modern && rollup -c rollup-modern.config.js",
     "serve:modern": "cd build/modern && es-dev-server --app-index=index.html --compatibility=none"
   },
   "keywords": [
