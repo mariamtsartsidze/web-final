@@ -75,6 +75,32 @@ export class UserTimeline extends BaseElement {
         row-gap: 36px;
         margin-top: 64px;
       }
+
+      @media (max-width: 1024px) {
+        .timeline-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .timeline-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .user-info {
+          flex-direction: column;
+          align-items: flex-start;
+          margin-left: 0;
+        }
+
+        .user-pic-wrapper {
+          margin-bottom: 18px;
+        }
+
+        .timeline-grid {
+          margin-top: 48px;
+        }
+      }
     `;
   }
 

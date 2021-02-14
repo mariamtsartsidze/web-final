@@ -5,6 +5,11 @@ import { BaseElement } from '../base-element';
 export class AppHeader extends BaseElement {
   static get styles() {
     return css`
+      :host {
+        --search-input-size: var(--search-field-width);
+        --shortcuts-margin: var(--shortcut-left-margin);
+      }
+
       .header {
         display: flex;
         flex-direction: row;
@@ -38,7 +43,7 @@ export class AppHeader extends BaseElement {
       }
 
       .search-field {
-        width: var(--search-field-width);
+        width: var(--search-input-size);
         height: var(--search-field-height);
       }
 
@@ -54,11 +59,11 @@ export class AppHeader extends BaseElement {
       }
 
       .shortcut:not(:first-child) {
-        margin-left: var(--shortcut-left-margin);
+        margin-left: var(--shortcuts-margin);
       }
 
       .search-input {
-        width: var(--search-field-width);
+        width: var(--search-input-size);
         height: var(--search-field-height);
         outline: none;
         box-sizing: border-box;
@@ -82,6 +87,38 @@ export class AppHeader extends BaseElement {
       .user-pic {
         display: block;
         max-height: 30px;
+      }
+
+      @media (max-width: 1024px) {
+        .nav-bar {
+          width: 80%;
+        }
+      }
+
+      @media (max-width: 600px) {
+        :host {
+          --search-input-size: 128px;
+          --shortcuts-margin: 10px;
+        }
+        
+        .nav-bar {
+          width: 100%;
+        }
+
+        .home-button {
+          margin-left: 12px;
+        }
+
+        .logo {
+          width: 64px;
+        }
+      }
+
+      @media (max-width: 350px) {
+        :host {
+          --search-input-size: 112px;
+          --shortcuts-margin: 8px;
+        }
       }
     `;
   }
@@ -113,7 +150,6 @@ export class AppHeader extends BaseElement {
             <input type="text" placeholder="search" class="search-input" />
           </div>
           <div class="shortcuts">
-            <iron-icon icon="home" class="shortcut" @click=${this._onHomeRedirect}></iron-icon>
             <iron-icon icon="communication:message" class="shortcut"></iron-icon>
             <iron-icon icon="thumb-up" class="shortcut"></iron-icon>
             <div class="shortcut" @click=${this._onTimelineRedirect}>
