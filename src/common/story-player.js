@@ -172,7 +172,7 @@ export class StoryPlayer extends BaseElement {
 
   render() {
     return html`
-      ${this.stories?.length
+      ${this.stories && this.stories.length
         ? html` <div class="overlay">
             <div class="story-modal">
               <div class="arrow-container">
