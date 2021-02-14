@@ -7,22 +7,27 @@ import '@polymer/iron-icons/iron-icons';
 import '@polymer/iron-icons/communication-icons';
 import '@polymer/iron-icons/social-icons';
 
-
 export class RootElement extends BaseElement {
   static get styles() {
     return css`
-      .content {
+      .content-padding {
         padding-top: calc(var(--header-height) + 1px);
+      }
+
+      .content {
         display: flex;
         flex-direction: row;
         justify-content: center;
         background-color: var(--background-white);
+        height: 100%;
       }
     `;
   }
 
   static get properties() {
-    return {};
+    return {
+      loggedIn: {type: Boolean}
+    };
   }
 
   constructor() {
@@ -34,12 +39,18 @@ export class RootElement extends BaseElement {
     const router = new Router(outlet, { baseUrl: '/' });
 
     router.setRoutes(routes);
+    console.log('firstupdated');
+
+    window.addEventListener('vaadin-router-location-changed', event => {
+      this.loggedIn = !!localStorage.getItem('loggedIn');
+    });
   }
 
   render() {
+    console.log('render2: ', this.userIsLoggedIn);
     return html`
-      <app-header></app-header>
-      <div class="content">
+      ${this.loggedIn ? html` <app-header></app-header> ` : ''}
+      <div class="content ${this.loggedIn ? 'content-padding' : ''}">
         <div id="outlet"></div>
       </div>
     `;

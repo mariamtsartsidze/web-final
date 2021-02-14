@@ -1,13 +1,23 @@
 import { BaseApi } from './base-api';
 
 export class UserApi extends BaseApi {
+  usersData = [];
+
   constructor() {
     super();
   }
 
-  register(userInfo) {
-    this.usersData.push(userInfo);
-    this.storeLogin(userInfo);
+  async register(userInfo) {
+    if (this.usersData.length === 0) {
+      this.usersData = await this.get('/src/api/data/users.json');
+    }
+    const userExists = this.usersData.find((user) => user.username === userInfo.username);
+    if (!userExists) {
+      this.usersData.push(userInfo);
+      this.storeLogin(userInfo);
+      return true;
+    }
+    return false;
   }
 
   storeLogin(userInfo) {
@@ -15,7 +25,10 @@ export class UserApi extends BaseApi {
     localStorage.setItem('userInfo', JSON.stringify(userInfo));
   }
 
-  login(username, password) {
+  async login(username, password) {
+    if (this.usersData.length === 0) {
+      this.usersData = await this.get('/src/api/data/users.json');
+    }
     const foundUser = this.usersData.find((user) => user.username === username && user.password === password);
     if (foundUser) {
       this.storeLogin(foundUser);
@@ -23,7 +36,7 @@ export class UserApi extends BaseApi {
     return !!foundUser;
   }
 
-  logout() {
+  async logout() {
     localStorage.removeItem('userInfo');
     localStorage.setItem('loggedIn', false);
   }
