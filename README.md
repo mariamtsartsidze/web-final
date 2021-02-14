@@ -12,8 +12,6 @@ backend: fake API using json files and localstorage help
 - news feed
 - timeline
 - story player
-- followers/following page
-
 
 
 **test user:**
