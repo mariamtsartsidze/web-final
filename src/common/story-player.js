@@ -121,6 +121,16 @@ export class StoryPlayer extends BaseElement {
           transform: translateY(-50%);
         }
 
+        .story-num {
+          margin-left: 18px;
+        }
+
+        .user-enum {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+        }
+
         @media (max-width: 600px) {
           :host {
             --card-width: calc(100vw - 2px);
@@ -185,6 +195,10 @@ export class StoryPlayer extends BaseElement {
     return this.stories[index].stories.length - 1;
   }
 
+  userStoriesNum(index) {
+    return this.stories[index].stories.length;
+  }
+
   previousStory() {
     if (this.userStoryIndex > 0) {
       this.userStoryIndex--;
@@ -223,11 +237,14 @@ export class StoryPlayer extends BaseElement {
             <div class="story-modal">
               <div class="story-card">
                 <div class="header border-box">
-                  <div class="user-container">
-                    <div class="story-user-pic-wrapper">
-                      <img class="story-user-pic" src="${this.stories[this.index].userPhotoUrl}" />
+                  <div class="user-enum">
+                    <div class="user-container">
+                      <div class="story-user-pic-wrapper">
+                        <img class="story-user-pic" src="${this.stories[this.index].userPhotoUrl}" />
+                      </div>
+                      <div>${this.stories[this.index].userName}</div>
                     </div>
-                    <div>${this.stories[this.index].userName}</div>
+                    <div class="story-num">${this.userStoryIndex + 1}/${this.userStoriesNum(this.index)}</div>
                   </div>
                   <iron-icon icon="close" class="close-icon" @click=${() => this.closeStory()}></iron-icon>
                 </div>
