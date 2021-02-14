@@ -54,7 +54,9 @@ export class NewsFeed extends BaseElement {
   render() {
     return html`
       <stories-card class="stories-card" .stories=${this.stories} @story-opened=${this._playerOpened}></stories-card>
-      ${this.newsFeed.map((post) => html`<post-element .imgUrl=${post.url} .author=${post.author} class="post"></post-element>`)}
+      ${this.newsFeed.map(
+        (post) => html`<post-element .imgUrl=${post.url} .author=${post.author} .comments=${post.comments} class="post"></post-element>`
+      )}
       <story-player id="player" .stories=${this.stories} @story-seen=${this._storySeen}></story-player>
     `;
   }

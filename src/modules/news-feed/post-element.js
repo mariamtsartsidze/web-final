@@ -11,7 +11,7 @@ export class PostElement extends BaseElement {
           --card-width: var(--post-width);
           --header-height: 60px;
           --header-padding: 16px;
-          --add-comment-height: 56px;
+          --comments-height: 56px;
           display: block;
         }
 
@@ -31,9 +31,24 @@ export class PostElement extends BaseElement {
           max-width: var(--card-width);
         }
 
-        .add-comment {
-          height: var(--add-comment-height);
+        .comments {
+          min-height: var(--comments-height);
           border-top: 1px solid rgba(var(--ce3, 239, 239, 239), 1);
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+
+        .comment {
+          margin-left: 8px;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+        }
+
+        .username {
+          font-weight: 600;
+          margin-right: 8px;
         }
 
         .reactions {
@@ -41,7 +56,7 @@ export class PostElement extends BaseElement {
           flex-direction: row;
         }
 
-        .reaction:not(:first-child) {
+        .reaction {
           margin-left: 16px;
         }
 
@@ -83,6 +98,9 @@ export class PostElement extends BaseElement {
       author: {
         type: Object,
       },
+      comments: {
+        type: Array,
+      },
     };
   }
 
@@ -109,7 +127,25 @@ export class PostElement extends BaseElement {
           <iron-icon icon="communication:comment" class="reaction"></iron-icon>
           <iron-icon icon="communication:message" class="reaction"></iron-icon>
         </div>
-        <div class="add-comment"></div>
+        <div class="comments">
+          ${this.comments && this.comments.length
+            ? html`
+                ${this.comments.map(
+                  (comment) => html`
+                    <div class="comment">
+                      <div class="username">
+                        ${comment.username}:
+                      </div>
+                      <div>${comment.text}</div>
+                    </div>
+                  `
+                )}
+              `
+            : html`<div class="comment">
+                No comments yet
+                <div></div>
+              </div>`}
+        </div>
       </div>
     `;
   }
